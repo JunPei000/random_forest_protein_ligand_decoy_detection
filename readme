@@ -1,0 +1,20 @@
+This folder contains codes for constructing RF models for CASF-2013 protein-ligand decoy detection.
+There are six programs in it:
+    1. atom_info.py                         functions to obtain information from residues in protein pocket, atoms from ligand, generating protein-ligand atompairs with a closest contact distance as 6 Angstrom.
+    2. CASF_seperate.py                     functinos to obtain all atom information from all ligand structures.
+    3. final_calc_CASF.py                   program which calculates the original dataframe (.csv) for protein-ligand native and decoy structures.
+    4. csv_collection.py                    collect alll original dataframes from code "final_calc_CASF.py" and save them in a new folder "original_csv".
+    5. final_descriptor_builder_CASF.py     transfer each original dataframe to a "comparison" dataframe
+    6. CASF_comparison.py                   Construct RF models based on the comparison dataframes.
+
+
+How to use those codes:
+    Path needs to be typed in some codes:
+    1. atom_info.py                         in function nonb_calc(), Path_of_GARF_reduced.json needs to be typed in.
+    2. CASF_seperate.py                     no path needs to be modified
+    3. final_calc_CASF.py                   Path_of_CASF2013_coreset needs to be set as direct1
+    4. csv_collection.py                    Path_of_CASF-2013 needs to be set as direct1
+    5. final_descriptor_builder_CASF.py     Path_of_CASF-2013 needs to be set as direct1
+    6. CASF_comparison.py                   Path_of_final_csv_folder needs to be set as direct1; Path_of_rank_result_for_all.json needs to be typed in to get list fp_rank; Path_of_rmsd_result_for_all.json needs to be typed in to get list fp_rmsd; Path_of_acc_result_for_all.json needs to be typed in to get list fp_acc; Path_of_CASF-2013_power_docking needs to be typed in to get list fp_d.
+
+    After typing all paths to the corresponding place, then run codes following the order 1 to 6, a Ramdom Forest model could be obtained for protein-ligand decoy detection.
