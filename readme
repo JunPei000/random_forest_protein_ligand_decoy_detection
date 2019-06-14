@@ -1,0 +1,7 @@
+Random Forest Refinement of Pairwise Potentials for Protein-Ligand Decoy Detection
+
+Here are the codes which are used in constructing the Random Forest model for Protein-Ligand decoy detection. We used CASF-2013 as our protein-ligand structure data base, GARF potential as the example of pair wised potential. The CASF-2013 data set can be down loaded from http://www.pdbbind.org.cn/casf.asp
+
+If you are interested in details in GARF, please read the origiinal paper -- Zheng, Z.; Pei, J.; Bansal, N.; Liu, H.; Song, L. F.; Merz, K. M. Generation of Pairwise Potentials Using Multidimensional Data Mining. J. Chem. Theory Comput. 2018, 14(10), 5045–5067.
+
+If you find our code useful, please cite our original paper
